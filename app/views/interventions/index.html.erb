@@ -1,0 +1,80 @@
+<html>
+
+ <body class="smoothscroll enable-animation">
+  <!-- wrapper -->
+  <div id="wrapper">
+
+    <!-- PAGE HEADER -->
+    <section class="page-header page-header-xlg parallax parallax-4" style = "background-image: url(<%= asset_path("Rocket_Elevator_Assets/Quote/AdobeStock_556688421.jpg") %>)">
+      <div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
+
+      <div class="container">
+
+        <div class="bold font-raleway wow fadeInUp animated">
+            <h2 class="fs-55 fw-400 text-center">INTERVENTIONS</h2>
+        </div>
+
+      </div>
+    </section>
+    <!-- /PAGE HEADER --> 
+
+    <%# <div class="row no-gutters wow slideInUp" data-wow-duration="1s"> %>
+    <div>
+      <%# <div class="col-md-12 home-form"> %>
+
+        <%= form_tag(interventions_path, method: "post", class: "container mt-50", remote: false) do %>
+          <div class="form-group form-row">
+            <div class="col-12 col-md" id="customer-group">
+              <%= label_tag "customers", "Customer", class: "form-label" %>
+              <%= select_tag "customers", options_from_collection_for_select(Customer.all, "id", "company_name"), prompt: "-- Required --", required: true, class: "form-control mb-0 mr-sm-0 mb-sm-0 border border-secondary text-dark" %>
+            </div>
+          </div>
+          <div class="form-group form-row">
+            <div class="col-12 col-md" id="building-group">
+              <%= label_tag "buildings", "Building", class: "form-label" %>
+              <%= select_tag "buildings", options_from_collection_for_select(Building.all, "id", "full_name_of_the_building_administrator"), prompt: "-- Required --", required: true, class: "form-control mb-0 mr-sm-0 mb-sm-0 border border-secondary text-dark" %>
+            </div>
+            <div class="col-12 col-md" id="battery-group">
+              <%= label_tag "batteries", "Battery", class: "form-label" %>
+              <%= select_tag "batteries", options_from_collection_for_select(Battery.all, "id", "id"), prompt: "-- Required --", required: true, class: "form-control mb-0 mr-sm-0 mb-sm-0 border border-secondary text-dark" %>
+            </div>
+            <div class="col-12 col-md" id="column-group">
+              <%= label_tag "columns", "Column", class: "form-label" %>
+              <%= select_tag "columns", options_from_collection_for_select(Column.all, "id", "id"), prompt: "-- None --", class: "form-control mb-0 mr-sm-0 mb-sm-0 border border-secondary text-dark" %>
+            </div>
+            <div class="col-12 col-md" id="elevator-group">
+              <%= label_tag "elevators", "Elevator", class: "form-label" %>
+              <%= select_tag "elevators", options_from_collection_for_select(Elevator.all, "id", "id"), prompt: "-- None --", class: "form-control mb-0 mr-sm-0 mb-sm-0 border border-secondary text-dark" %>
+            </div>
+          </div>
+          <div class="form-group form-row">
+            <div class="col" id="employee-group">
+              <%= label_tag "employees", "Employee", class: "form-label" %>
+              <%= select_tag "employees", options_from_collection_for_select(Employee.all, "id", "full_name"), prompt: "-- None --", class: "form-control mb-0 mr-sm-0 mb-sm-0 border border-secondary text-dark" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= label_tag "description", "Intervention Description", class: "form-label" %>
+            <%= text_area_tag "description", nil, required: true, class: "form-control h-150 border border-secondary" %>
+          </div>
+          <div class="form-group">
+            <% if current_user and current_user.employee_role? %>
+              <%= submit_tag("Submit Intervention", class: "btn btn-primary btn-block", title: "Hello") %>
+            <% else %>
+              <%= submit_tag("Submit Intervention", class: "btn btn-primary btn-block", disabled: true) %>
+            <% end %>
+          </div>
+        <% end %>
+
+      <%# </div> %>
+    </div>
+
+
+  <div>
+  <!-- /wrapper -->
+
+  <!-- SCROLL TO TOP -->
+  <a href="#" id="toTop"></a>
+
+  </body>
+</html>

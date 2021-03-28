@@ -1,0 +1,3 @@
+class NewIntervention < ApplicationRecord
+   
+end

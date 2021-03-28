@@ -1,0 +1,6 @@
+current directory: /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/http-parser-1.2.3/ext
+/home/jeremy/.rvm/rubies/ruby-2.6.6/bin/ruby -rrubygems /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/rake-13.0.3/exe/rake RUBYARCHDIR\=/home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/http-parser-1.2.3 RUBYLIBDIR\=/home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/http-parser-1.2.3
+mkdir -p x86_64-linux/http-parser
+gcc -fexceptions -O -fno-omit-frame-pointer -fno-strict-aliasing -Wall -Wextra -O3 -fPIC   -o x86_64-linux/http-parser/http_parser.o -c ./http-parser/http_parser.c
+/home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/rake-13.0.3/lib/rake/file_utils.rb:54: warning: Insecure world writable dir /mnt/c in PATH, mode 040777
+gcc -shared -o x86_64-linux/libhttp-parser-ext.so x86_64-linux/http-parser/http_parser.o -fexceptions 

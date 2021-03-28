@@ -1,0 +1,60 @@
+<head>
+    <%= javascript_include_tag "intervention"%>
+</head>
+<section class="page-header page-header-xlg parallax parallax-4" style="background-image:url('<%= image_path('Rocket_Elevator_Assets/Residential_page/elavator1.jpg') %>')">
+				<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
+
+				<div class="container">
+
+					<div class="bold font-raleway wow fadeInUp animated">
+						
+					</div>
+
+				</div>
+			</section>
+			
+<section>
+    <div class="container">
+
+        <header class="text-center">
+            <h1 class="m-1">Interventions</h1>
+           
+        </header>
+        
+        <hr />
+
+
+        <div class="col-md-1">
+
+            <div class="col-lg-4 col-md-4 push-md-4 text-center order-md-2 order-lg-2">
+                <div class="row no-gutters wow slideInUp" data-wow-duration="1s">
+                    <div class=".col-md-4">
+                        <form action="/intervention" method="post" id="intervention">
+                            <%= form_with(model: @Intervention, id:"intervention",  class: "form-inline", remote: true) do |f| %>
+                                <%= f.select :customers, Customer.all.collect {|customers|[customers.company_name + ", Customer ID: " + customers.id.to_s, customers.id]}, prompt: "Customer", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+                                <%= f.select :buildings, Building.all.collect {|buildings|[buildings.id]}, prompt: "Buildings", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+                                <%= f.select :batteries, Battery.all.collect {|batteries|[batteries.id]}, prompt: "Batteries", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+                                <%= f.select :columns, Column.all.collect {|columns|[columns.id]}, prompt: "Columns", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+                                <%= f.select :elevators, Elevator.all.collect {|elevators|[elevators.id]}, prompt: "Elevators", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+                                <%= f.select :employees, Employee.all.collect {|employees|[employees.id]}, prompt: "Employee", class: "custom-select mb-0 mr-sm-0 mb-sm-0" %>
+                                <%= f.text_area :report %>
+                                <%= submit_tag("Submit", class: "btn btn-primary") %>
+                            <%end%>
+                            
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+
+                
+            
+        </div>
+
+
+    </div>
+</section>
+
+			

@@ -1,0 +1,15 @@
+current directory: /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+/home/jeremy/.rvm/rubies/ruby-2.6.6/bin/ruby -I /home/jeremy/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210327-18385-1td4go4.rb extconf.rb
+creating Makefile
+
+current directory: /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20210327-18385-59irqb

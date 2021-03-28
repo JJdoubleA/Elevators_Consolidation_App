@@ -1,0 +1,19 @@
+current directory: /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/bcrypt_pbkdf-1.0.1/ext/mri
+/home/jeremy/.rvm/rubies/ruby-2.6.6/bin/ruby -I /home/jeremy/.rvm/rubies/ruby-2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210327-18385-11nll46.rb extconf.rb
+creating Makefile
+
+current directory: /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/bcrypt_pbkdf-1.0.1/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/bcrypt_pbkdf-1.0.1/ext/mri
+make "DESTDIR="
+compiling bcrypt_pbkdf.c
+compiling bcrypt_pbkdf_ext.c
+compiling blowfish.c
+compiling explicit_bzero.c
+compiling hash_sha512.c
+linking shared-object bcrypt_pbkdf_ext.so
+
+current directory: /home/jeremy/Rocket_Consolidation_App/Rocket_Elevators_API/vendor/bundle/ruby/2.6.0/gems/bcrypt_pbkdf-1.0.1/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bcrypt_pbkdf_ext.so ./.gem.20210327-18385-1j5e9we
