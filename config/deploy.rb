@@ -6,7 +6,7 @@ set :rvm_map_bins, [ 'rake', 'gem', 'bundle', 'ruby', 'puma', 'pumactl' ]
 set :application, "JeremyAugustin"
 set :repo_url, "https://github.com/JJdoubleA/Elevators_Consolidation_App.git"
 set :rvm1_ruby_version, "ruby-2.0.0-p247"
-#set :bundle_gemfile, "/home/jeremy/Elevators_Consolidation_App/Gemfile.lock"
+set :bundle_gemfile, "Elevators_Consolidation_App/Gemfile"
 set :deploy_to, "/home/jeremy/Elevators_Consolidation_App"
 
  set :whenever_command, "bundle exec whenever"
