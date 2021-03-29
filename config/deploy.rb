@@ -1,15 +1,11 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.16.0"
+lock "~> 3.11.0"
 
 before 'deploy', 'rvm1:install:ruby'
 set :rvm_map_bins, [ 'rake', 'gem', 'bundle', 'ruby', 'puma', 'pumactl' ]
 set :application, "JeremyAugustin"
-set :repo_url, "https://github.com/JJdoubleA/Elevators_Consolidation_App.git"
-set :rvm1_ruby_version, "ruby-2.0.0-p247"
-set :bundle_gemfile, "Elevators_Consolidation_App/Gemfile"
-set :deploy_to, "/home/jeremy/Elevators_Consolidation_App"
+set :repo_url, "https://github.com/JJdoubleA/Elevators_Consolidation_App"
 
- set :whenever_command, "bundle exec whenever"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

@@ -15,10 +15,8 @@ set :rails_env, "development"
 set :bundle_without, "production"
 set :deploy_to, "/home/ubuntu/apps/#{app}"
 set :linked_dirs, %w{tmp/pids tmp/sockets log}
-set :linked_files, %w{config/database.yml config/application.yml}
-set :branch, "main"
-set :whenever_path, ->{ release_path }
-set :bundle_gemfile, "/home/jeremy/Elevators_Consolidation_App/Gemfile"
+set :linked_files, %w{config/database.yml}
+
 # role-based syntax
 # ==================
 
