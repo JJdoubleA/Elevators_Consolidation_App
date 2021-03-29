@@ -56,6 +56,11 @@ class InterventionController < ApplicationController
         def intervention_params
             params.require(:intervention).permit(:author_id,:customer_id,:building_id,:battery_id,:column_id,:elevator_id,:employee_id,:start_date,:end_date, :status)
         end
+        client = ZendeskAPI::Client.new do |config|
+            config.url = ENV['ZENDESK_URL']
+            config.username = ENV['ZENDESK_USERNAME']
+            config.token = ENV['ZENDESK_TOKEN']
+        end
         ZendeskAPI::Ticket.create!(client, 
         :subject => "Intervention create by #{current_user.employee.first_name} #{current_user.employee.last_name}", 
         :comment => { 
