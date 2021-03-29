@@ -1,4 +1,4 @@
-// app/assets/javascripts/intervention.js
+  // app/assets/javascripts/intervention.js
 
 $(document).ready(function (){
 
