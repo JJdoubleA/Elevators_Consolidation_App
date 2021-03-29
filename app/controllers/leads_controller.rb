@@ -42,7 +42,7 @@ class LeadsController < ApplicationController
         # Sending email from Sendgrid API #
         #=================================#
 
-        from = Email.new(email: "#{ENV['SENDGRID_FROM_EMAIL']}")
+        from = Email.new(email: "jaytdot2k@gmail.com")
         to = Email.new(email: @lead.email)
         subject = 'Sending with SendGrid is Fun'
         content = Content.new(type: 'text/html', value: 'and easy to do anywhere, even with Ruby')
@@ -53,7 +53,7 @@ class LeadsController < ApplicationController
         personalization.add_dynamic_template_data("FullName" => @lead.full_name_of_contact());
         personalization.add_dynamic_template_data("ProjectName"=> @lead.project_name());
         
-        mail.template_id = ENV['SENDGRID_TEMPLATE_ID']
+        mail.template_id ='d-ab22bc2be7e44ad9bdbc5531c9b59f21'
         mail.add_personalization(personalization)
 
         sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])

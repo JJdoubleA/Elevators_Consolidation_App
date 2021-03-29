@@ -56,25 +56,25 @@ class InterventionController < ApplicationController
         def intervention_params
             params.require(:intervention).permit(:author_id,:customer_id,:building_id,:battery_id,:column_id,:elevator_id,:employee_id,:start_date,:end_date, :status)
         end
-    #     ZendeskAPI::Ticket.create!(client, 
-    #     :subject => "Intervention create by #{current_user.employee.first_name} #{current_user.employee.last_name}", 
-    #     :comment => { 
-    #       :value => "Requester: #{current_user.employee.first_name} #{current_user.employee.last_name}
-    #                  Company Name: #{Customer.find(params[:customers]).company_name}
-    #                  Building ID: #{params[:buildings]}
-    #                  Battery ID: #{params[:batteries]}
-    #                  Column ID: #{params[:columns]}
-    #                  Elevator ID: #{params[:elevators]}
-    #                  Assigned Employee: #{Employee.find(params[:employees]).first_name} #{Employee.find(params[:employees]).last_name}
-    #                  Description: #{params[:description]}"
-    #     }, 
-    #     :requester => { 
-    #         "name": "#{current_user.employee.first_name} #{current_user.employee.last_name}", 
-    #         # "email": @lead.email 
-    #     },
-    #     :priority => "urgent",
-    #     :type => "problem"
-    #   )
+        ZendeskAPI::Ticket.create!(client, 
+        :subject => "Intervention create by #{current_user.employee.first_name} #{current_user.employee.last_name}", 
+        :comment => { 
+          :value => "Requester: #{current_user.employee.first_name} #{current_user.employee.last_name}
+                     Company Name: #{Customer.find(params[:customers]).company_name}
+                     Building ID: #{params[:buildings]}
+                     Battery ID: #{params[:batteries]}
+                     Column ID: #{params[:columns]}
+                     Elevator ID: #{params[:elevators]}
+                     Assigned Employee: #{Employee.find(params[:employees]).first_name} #{Employee.find(params[:employees]).last_name}
+                     Description: #{params[:description]}"
+        }, 
+        :requester => { 
+            "name": "#{current_user.employee.first_name} #{current_user.employee.last_name}", 
+            # "email": @lead.email 
+        },
+        :priority => "urgent",
+        :type => "problem"
+      )
 
     end
     
