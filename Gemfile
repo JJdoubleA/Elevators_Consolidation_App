@@ -43,6 +43,10 @@ gem 'rails_admin_rollincode', '~> 1.0'
 # Zendesk API
 gem 'zendesk_api'
 
+#Rspec Gem
+source "https://rubygems.org"
+gem 'rspec', '~>3.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.5'
 # Use mysql as the database for Active Record
@@ -92,6 +96,8 @@ gem 'dropbox_api'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  #source "https://rubygems.org"
+  gem 'rspec', '~>3.0'
 end
 
 group :development do
@@ -108,6 +114,7 @@ group :development do
   gem 'capistrano-bundler', '>= 1.1.0'
   gem 'rvm1-capistrano3', require: false
   gem 'capistrano3-puma'
+  gem 'rspec-rails'
  end
 
 group :test do
