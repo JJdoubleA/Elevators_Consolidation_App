@@ -114,4 +114,5 @@ class LeadsController < ApplicationController
     def lead_params
         params.required(:leads).permit!
     end
+    
 end

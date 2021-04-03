@@ -81,6 +81,10 @@ class InterventionController < ApplicationController
         :type => "problem"
       )
 
+    #   def letter
+    #     name = params[:customers]
+    #     name.split.map(&:first)
+    # end
     end
     
 end

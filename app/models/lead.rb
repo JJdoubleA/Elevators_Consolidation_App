@@ -30,4 +30,9 @@ class Lead < ApplicationRecord
    #         :type => "question"
    #         )
    # end
+   def letter
+      @lead = Lead.new
+      @lead.full_name_of_contact  = "jeremy"
+      @lead.full_name_of_contact.split.map(&:first)
+  end
 end

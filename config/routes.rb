@@ -41,6 +41,8 @@ Rails.application.routes.draw do
 
   post "/intervention" => "intervention#create"
 
+  
+
   # /quotes is the action from the form in quote.html.erb
   post "/quotes" => "quotes#create"
 
