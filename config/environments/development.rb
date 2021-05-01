@@ -63,6 +63,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Blazer for development environment
-  ENV["BLAZER_DATABASE_URL"] = "postgres://codeboxx:Codeboxx1!@codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com/JeremyAugustin"
+  ENV["BLAZER_DATABASE_URL"] = "postgres://JeremyAugustin:Jayced579@postgres.ctes5dpedidh.ca-central-1.rds.amazonaws.com/JeremyAugustin"
 
 end

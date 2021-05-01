@@ -89,6 +89,9 @@ gem 'blazer'
 #facilitates the communication  with Dropbox API v2.
 gem 'dropbox_api'
 
+gem 'newrelic_rpm'
+
+gem 'newrelic-infinite_tracing'
 
 
 
@@ -114,6 +117,7 @@ group :development do
   gem 'capistrano-bundler', '>= 1.1.0'
   gem 'rvm1-capistrano3', require: false
   gem 'capistrano3-puma'
+  gem 'capistrano-rvm'
   gem 'rspec-rails'
  end
 
