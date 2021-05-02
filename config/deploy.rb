@@ -3,12 +3,12 @@ lock "~> 3.16.0"
 
 before 'deploy', 'rvm1:install:ruby'
 set :rvm_map_bins, [ 'rake', 'gem', 'bundle', 'ruby', 'puma', 'pumactl' ]
+# set :rvm1_roles, [:rvm]
 set :application, "JeremyAugustin"
 set :repo_url, "https://github.com/JJdoubleA/Elevators_Consolidation_App"
 set :default_branch, "main"
 # Default branch is :master
  ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-
 
  
  
