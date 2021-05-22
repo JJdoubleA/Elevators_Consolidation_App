@@ -1,6 +1,8 @@
 # Elevators_Consolidation_App
 
+<h2>Starting the Web App:</h2>
 
+<p>Run "rails s" in the terminal <p>
 <h2>Postman links:</h2>
 
 
